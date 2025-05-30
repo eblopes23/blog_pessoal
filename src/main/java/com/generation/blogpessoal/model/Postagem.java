@@ -24,7 +24,7 @@ public class Postagem {
 	private Long id;
 	
 	@NotBlank(message = "O atributo título é Obrigatório!") 
-	@Size(min = 5, max = 100, message = "O atributo título deve conter no mínimo 05 e no máximo 100 caracteres")
+	@Size(min = 3, max = 100, message = "O atributo título deve conter no mínimo 05 e no máximo 100 caracteres")
 	private String titulo;
 	
 	@NotBlank(message = "O atributo texto é Obrigatório!")
@@ -32,7 +32,7 @@ public class Postagem {
 	private String texto;
 	
 	@UpdateTimestamp
-	private LocalDateTime data;
+	private ZonedDateTime data;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
@@ -66,11 +66,11 @@ public class Postagem {
         this.texto = texto;
     }
 
-    public LocalDateTime getData() {
+    public ZonedDateTime getData() {
         return this.data;
     }
 
-    public void setData(LocalDateTime data) {
+    public void setData(ZonedDateTime data) {
         this.data = data;
     }
 
