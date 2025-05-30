@@ -1,6 +1,7 @@
 package com.generation.blogpessoal.model;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+
 
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -14,6 +15,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+
+
 
 @Entity
 @Table(name = "tb_postagens")
